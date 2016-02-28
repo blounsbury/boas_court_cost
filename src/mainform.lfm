@@ -1,0 +1,379 @@
+object Form1: TForm1
+  Left = 415
+  Height = 430
+  Top = 185
+  Width = 584
+  Caption = 'Boas Court Cost Calculator'
+  ClientHeight = 430
+  ClientWidth = 584
+  Constraints.MinHeight = 430
+  Constraints.MinWidth = 580
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.4.2.0'
+  object PageControl1: TPageControl
+    Left = 8
+    Height = 416
+    Top = 8
+    Width = 568
+    ActivePage = Setup
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabIndex = 1
+    TabOrder = 0
+    object Cost: TTabSheet
+      Caption = 'Cost'
+      ClientHeight = 381
+      ClientWidth = 562
+      object dtCourtStart: TDateTimePicker
+        Left = 24
+        Height = 23
+        Top = 32
+        Width = 78
+        ArrowShape = asModernLarger
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 0
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = False
+        Kind = dtkTime
+        TimeFormat = tf12
+        TimeDisplay = tdHM
+        DateMode = dmComboBox
+        Date = 42318
+        Time = 0.833333333335759
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        OnChange = dtCourtStartChange
+      end
+      object Label5: TLabel
+        Left = 112
+        Height = 17
+        Top = 35
+        Width = 11
+        Caption = 'to'
+        ParentColor = False
+      end
+      object dtCourtEnd: TDateTimePicker
+        Left = 136
+        Height = 23
+        Top = 32
+        Width = 78
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 1
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = False
+        Kind = dtkTime
+        TimeFormat = tf12
+        TimeDisplay = tdHM
+        DateMode = dmComboBox
+        Date = 42318
+        Time = 0.916666666664241
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        OnChange = dtCourtEndChange
+      end
+      object Label6: TLabel
+        Left = 24
+        Height = 17
+        Top = 16
+        Width = 65
+        Caption = 'Court Time:'
+        ParentColor = False
+      end
+      object Label7: TLabel
+        Left = 24
+        Height = 17
+        Top = 86
+        Width = 103
+        Caption = 'Number of Courts:'
+        ParentColor = False
+      end
+      object Label8: TLabel
+        Left = 24
+        Height = 17
+        Top = 118
+        Width = 107
+        Caption = 'Number of Players:'
+        ParentColor = False
+      end
+      object lblTotalCost: TLabel
+        Left = 80
+        Height = 17
+        Top = 176
+        Width = 93
+        Caption = 'Court Cost Total:'
+        ParentColor = False
+      end
+      object lblPlayerCost: TLabel
+        Left = 80
+        Height = 17
+        Top = 208
+        Width = 126
+        Caption = 'Court Cost per Person:'
+        ParentColor = False
+      end
+      object cbNumCourts: TComboBox
+        Left = 144
+        Height = 29
+        Top = 80
+        Width = 100
+        DropDownCount = 6
+        ItemHeight = 0
+        ItemIndex = 0
+        Items.Strings = (
+          '1'
+          '2'
+          '3'
+          '4'
+          '5'
+          '6'
+        )
+        OnChange = cbNumCourtsChange
+        TabOrder = 2
+        Text = '1'
+      end
+      object cbNumPlayers: TComboBox
+        Left = 144
+        Height = 29
+        Top = 112
+        Width = 100
+        DropDownCount = 12
+        ItemHeight = 0
+        ItemIndex = 0
+        Items.Strings = (
+          '2'
+          '4'
+          '6'
+          '8'
+          '10'
+          '12'
+          '14'
+          '16'
+          '18'
+          '20'
+          '22'
+          '24'
+        )
+        OnChange = cbNumPlayersChange
+        TabOrder = 3
+        Text = '2'
+      end
+    end
+    object Setup: TTabSheet
+      Caption = 'Setup'
+      ClientHeight = 381
+      ClientWidth = 562
+      object Label1: TLabel
+        Left = 24
+        Height = 17
+        Top = 16
+        Width = 81
+        Caption = 'Prime Time(s):'
+        ParentColor = False
+      end
+      object dtPrimeEnd1: TDateTimePicker
+        Left = 136
+        Height = 23
+        Top = 34
+        Width = 78
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 0
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = False
+        Kind = dtkTime
+        TimeFormat = tf12
+        TimeDisplay = tdHM
+        DateMode = dmComboBox
+        Date = 42318
+        Time = 0.854166666664241
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        OnChange = dtPrimeEnd1Change
+      end
+      object Label2: TLabel
+        Left = 112
+        Height = 17
+        Top = 37
+        Width = 11
+        Caption = 'to'
+        ParentColor = False
+      end
+      object dtPrimeStart1: TDateTimePicker
+        Left = 24
+        Height = 23
+        Top = 34
+        Width = 78
+        ArrowShape = asModernLarger
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 1
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = False
+        Kind = dtkTime
+        TimeFormat = tf12
+        TimeDisplay = tdHM
+        DateMode = dmComboBox
+        Date = 42318
+        Time = 0.729166666664241
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        OnChange = dtPrimeStart1Change
+      end
+      object Label3: TLabel
+        Left = 24
+        Height = 17
+        Top = 117
+        Width = 115
+        Caption = 'Prime Cost per hour:'
+        ParentColor = False
+      end
+      object Label4: TLabel
+        Left = 24
+        Height = 17
+        Top = 149
+        Width = 124
+        Caption = 'Normal Cost per hour:'
+        ParentColor = False
+      end
+      object fsePrimeCost: TFloatSpinEdit
+        Left = 160
+        Height = 27
+        Top = 112
+        Width = 82
+        Increment = 0.5
+        MaxValue = 1000
+        MinValue = 0
+        OnChange = fsePrimeCostChange
+        TabOrder = 2
+        Value = 12
+      end
+      object fseNormalCost: TFloatSpinEdit
+        Left = 160
+        Height = 27
+        Top = 144
+        Width = 82
+        Increment = 0.5
+        MaxValue = 1000
+        MinValue = 0
+        OnChange = fseNormalCostChange
+        TabOrder = 3
+        Value = 10
+      end
+      object dtPrimeStart2: TDateTimePicker
+        Left = 24
+        Height = 23
+        Top = 66
+        Width = 78
+        ArrowShape = asModernLarger
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 4
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = False
+        Kind = dtkTime
+        TimeFormat = tf12
+        TimeDisplay = tdHM
+        DateMode = dmComboBox
+        Date = 42318
+        Time = 0.729166666664241
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        OnChange = dtPrimeStart2Change
+      end
+      object Label9: TLabel
+        Left = 112
+        Height = 17
+        Top = 69
+        Width = 11
+        Caption = 'to'
+        ParentColor = False
+      end
+      object dtPrimeEnd2: TDateTimePicker
+        Left = 136
+        Height = 23
+        Top = 66
+        Width = 78
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 5
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = False
+        Kind = dtkTime
+        TimeFormat = tf12
+        TimeDisplay = tdHM
+        DateMode = dmComboBox
+        Date = 42318
+        Time = 0.791666666664241
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        OnChange = dtPrimeEnd2Change
+      end
+      object cbPrime1Days: TCheckComboBox
+        Left = 232
+        Height = 27
+        Top = 32
+        Width = 100
+        AutoSize = False
+        DropDownCount = 7
+        ItemHeight = 0
+        Items.Strings = (
+          'Sunday'
+          'Monday'
+          'Tuesday'
+          'Wednesday'
+          'Thursday'
+          'Friday'
+          'Saturday'
+        )
+        TabOrder = 6
+      end
+      object cbPrime2Days: TCheckComboBox
+        Left = 232
+        Height = 27
+        Top = 64
+        Width = 100
+        AutoSize = False
+        DropDownCount = 7
+        ItemHeight = 0
+        Items.Strings = (
+          'Sunday'
+          'Monday'
+          'Tuesday'
+          'Wednesday'
+          'Thursday'
+          'Friday'
+          'Saturday'
+        )
+        TabOrder = 7
+      end
+      object Label10: TLabel
+        Left = 232
+        Height = 17
+        Top = 16
+        Width = 81
+        Caption = 'Prime Days(s):'
+        ParentColor = False
+      end
+    end
+  end
+end

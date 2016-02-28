@@ -1,3 +1,6 @@
+backup/
+lib/
+*.res
 *.lps
 *.compiled
 *.[oa]
