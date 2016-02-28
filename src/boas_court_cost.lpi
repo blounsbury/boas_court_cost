@@ -52,7 +52,7 @@
   <CompilerOptions>
     <Version Value="11"/>
     <Target>
-      <Filename Value="boas_court_cost"/>
+      <Filename Value="bin/boas_court_cost"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>

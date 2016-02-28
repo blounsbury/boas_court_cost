@@ -1,4 +1,5 @@
 backup/
+bin/
 lib/
 *.res
 *.lps
